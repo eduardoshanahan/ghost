@@ -4,7 +4,7 @@ services:
     image: eduardoshanahan/ghost:latest
     container_name: ghost-test
     environment:
-      DEV_DOMAIN: http://192.168.99.100:2368
+      DEV_DOMAIN: http://localhost:2368
     ports:
       - 2368:2368
     volumes:
