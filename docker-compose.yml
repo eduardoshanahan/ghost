@@ -1,6 +1,6 @@
 version: "2"
 services:
-  nginx:
+  ghost:
     image: eduardoshanahan/ghost:latest
     container_name: ghost-test
     environment:
