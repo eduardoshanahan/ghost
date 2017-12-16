@@ -4,32 +4,42 @@ A Docker image with [Ghost](https://ghost.org).
 
 ## Building
 
-```bash
-docker build -t eduardoshanahan/ghost .
+```
+docker build . -t eduardoshanahan/ghost:latest
 ```
 
-## Running a test
+## Running an interactive test
 
-```bash
-docker run --rm -p 2068:2068 eduardoshanahan/ghost:latest
+```
+docker run --rm -it eduardoshanahan/ghost:latest
 ```
 
-Or you can use Docker Compose:
+Or with Docker Compose
 
-```bash
-docker-compose up
+```
+docker-compose run --rm shell
 ```
 
 Then you can curl to:
 
-```bash
+```
 curl localhost:2068
+```
+
+## Building an image in Docker Hub
+
+If for any reason the tagged build fails, you can fire a fresh one running
+
+```
+./build_image.sh
 ```
 
 ## Development
 
-If you want to make some changes and version it, [bumpversion](https://pypi.python.org/pypi/bumpversion) is available
+To send the commits to the remote server, you can use the script
 
-```bash
-bumpversion patch
 ```
+./save.sh
+```
+
+which will also create a new tag if the version is updated.

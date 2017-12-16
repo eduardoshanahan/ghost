@@ -1,3 +1,3 @@
-FROM zzrot/alpine-ghost:v0.11.0
+FROM ghost:1.19.0-alpine
 
-MAINTAINER Eduardo Shanahan <contact@eduardoshanahan.com>
+LABEL maintainer 'Eduardo Shanahan <contact@eduardoshanahan.com>'
