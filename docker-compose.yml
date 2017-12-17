@@ -4,8 +4,9 @@ services:
 
   ghost:
     image: eduardoshanahan/ghost:latest
-    container_name: ghost-test
+    container_name: es_ghost
     environment:
       DEV_DOMAIN: http://localhost:2368
     ports:
-      - 2368:2368
+      - target: 2368
+        published: 2368
