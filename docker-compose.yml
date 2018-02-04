@@ -8,5 +8,4 @@ services:
     environment:
       DEV_DOMAIN: http://localhost:2368
     ports:
-      - target: 2368
-        published: 2368
+      - 2368:2368
